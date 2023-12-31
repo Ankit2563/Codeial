@@ -13,7 +13,7 @@ const homeController=require('../controllers/home_controller')
 // it used to seprate the route and the controller
 const router = express.Router();
 
-console.log('router loaded');
+
 router.get('/', homeController.home)
 router.use('/user', require('./user'));
 // for any further routers access from here
