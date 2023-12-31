@@ -9,4 +9,9 @@
 
 const express = require('express');
 
+// it used to seprate the route and the controller
 const router = express.Router();
+
+console.log('router loaded');
+
+module.exports = router;
