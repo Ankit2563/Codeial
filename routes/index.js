@@ -16,5 +16,7 @@ const router = express.Router();
 console.log('router loaded');
 router.get('/', homeController.home)
 router.use('/user', require('./user'));
+// for any further routers access from here
+// router.use('/routerName', require('./routerfile'));
 
 module.exports = router;
