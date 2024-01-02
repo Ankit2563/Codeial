@@ -11,3 +11,16 @@ module.exports.post= function (req, res) {
       title: "this is page of the posting "
     });
 }
+
+// rendering the sign up part page
+module.exports.signUp = function (req, res) {
+    return res.render('user_sign_up', {
+        title:'Sign up our website'
+    })
+}
+// rendering the sign in page
+module.exports.signIn = function (req, res) {
+    return res.render('user_sign_in', {
+        title:'Sign In our website'
+    })
+}
