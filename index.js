@@ -6,6 +6,7 @@ const port = 8000;
 
 //use express router
 app.use('/', require('./routes'));
+// app.set('title', 'My site');
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
