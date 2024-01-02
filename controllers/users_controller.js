@@ -24,3 +24,13 @@ module.exports.signIn = function (req, res) {
         title:'Sign In our website'
     })
 }
+
+// get the sign up data
+module.exports.create = function (req, res) {
+    // letter do
+}
+
+// sign in the
+module.exports.createSession = function (req, res) {
+    // letter do
+}
