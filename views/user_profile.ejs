@@ -1,67 +1,16 @@
 <html>
     <head>
         <%=title%>
+        <style>
+            body{
+                background-color: blueviolet;
+            }
+        </style>
     </head>
     <body>
         <h1> <%=title%></h1>
+        <p>Name:<%=user.name%></p>
+        <p>mail:<%=user.email%></p>
     </body>
 </html>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    
-    <title><%= title %></title>
-
-    <!-- Link to an external CSS file (adjust the path accordingly) -->
-    
-
-    <!-- Alternatively, you can include styles directly in the HTML using a <style> tag -->
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            color: blue;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Profile - <%= title %></h1>
-    </header>
-
-    <main>
-        <p>Welcome to your user profile page. This is a good profile.</p>
-        <!-- Add more content as needed -->
-    </main>
-
-    <footer>
-        <!-- Add footer content if necessary -->
-    </footer>
-</body>
-</html>
