@@ -6,3 +6,5 @@ npm install ejs
 what is cookie ;stores key value pair userId with the seasonal 
 cookie basicly stores its identity ocassionally when u logIn
 Installing the cookie ->npm install cookie-parser
+
+to got into new branch
