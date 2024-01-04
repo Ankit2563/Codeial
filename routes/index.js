@@ -15,7 +15,7 @@ const router = express.Router();
 
 
 router.get('/', homeController.home)
-router.use('/user', require('./user'));
+router.use('/users', require('./users'));
 // for any further routers access from here
 // router.use('/routerName', require('./routerfile'));
 
