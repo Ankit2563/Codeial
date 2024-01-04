@@ -29,6 +29,7 @@ module.exports.signIn = function (req, res) {
 }
 
 // get the sign up data
+// authentication
 module.exports.create = async function (req, res) {
   try {
     if (req.body.password !== req.body.confirm_password) {
@@ -52,6 +53,26 @@ module.exports.create = async function (req, res) {
 
 
 // sign in the
-module.exports.createSession = function (req, res) {
-    // letter do
-}
+
+module.exports.createSession = async function (req, res) {
+  try {
+    const user = await User.findOne({ email: req.body.email });
+
+    if (user) {
+      // Handle password check
+      if (user.password !== req.body.password) {
+        return res.redirect("back");
+      }
+
+      // Handle session creation
+      res.cookie("user_id", user.id);
+      return res.redirect("/users/profile");
+    } else {
+      // Handle user not found
+      return res.redirect("back");
+    }
+  } catch (error) {
+    console.error("Error in creating session:", error);
+    return res.redirect("back");
+  }
+};
