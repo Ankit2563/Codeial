@@ -1,4 +1,0 @@
-npm init-> initialize package
-npm install express ->express server
-nodemon index.js
-npm install ejs

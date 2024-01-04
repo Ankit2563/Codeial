@@ -1,0 +1,8 @@
+npm init-> initialize package
+npm install express ->express server
+nodemon index.js
+npm install ejs
+
+what is cookie ;stores key value pair userId with the seasonal 
+cookie basicly stores its identity ocassionally when u logIn
+Installing the cookie
