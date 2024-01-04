@@ -3,7 +3,7 @@ const User = require('../models/user');//to use in creating sign Up
 
 
 module.exports.profile = async function (req, res) {
-    //    return res.end('<h1>User Profile</h1>')
+    
     // now how to authenticate the profile
     try {
         if (req.cookies.user_id) {
