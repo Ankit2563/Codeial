@@ -1,18 +1,16 @@
 /** @format */
 
+// require th library
 const mongoose = require("mongoose");
-
-// mongoose.connect("mongodb://localhost/codeial_development");
-// Replace this with your actual connection string
-const mongooseConnectionString = 'mongodb://localhost:27017/codeial_development';
-// mongoose.connect.mongooseConnectionString
-
+// connect to database
+mongoose.connect("mongodb://127.0.0.1:27017");
+// acquire the connection to check if it is successfull
 const db = mongoose.connection;
 
-db.on("error", console.error.bind(console, "Error connecting to MongoDB"));
+//error
+db.on("error", console.error.bind(console, "error connecting to db"));
 
+// up and running the print the message
 db.once("open", function () {
-  console.log("Connected to Database :: MongoDB");
+  console.log("successfully connected to the database");
 });
-
-module.exports = db;
