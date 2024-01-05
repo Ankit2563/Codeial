@@ -93,3 +93,21 @@ module.exports.createSession = async function (req, res) {
     return res.redirect("back");
   }
 };
+
+
+
+
+// keep track of the signOut
+module.exports.logout = function (req, res) {
+  try {
+    // Clear the 'user_id' cookie
+    res.clearCookie("user_id");
+
+    // Redirect to the sign-in page or any other desired destination
+    res.redirect("/users/sign-in");
+  } catch (error) {
+    console.error("Error in logout:", error);
+    // Handle the error, maybe redirect to an error page or log it
+    res.status(500).send("Internal Server Error");
+  }
+};
