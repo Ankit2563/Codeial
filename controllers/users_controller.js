@@ -53,5 +53,6 @@ module.exports.create = async function (req, res) {
 
 // sign in the
 module.exports.createSession = function (req, res) {
-    // letter do
+  // letter do
+  return res.redirect('/');
 }

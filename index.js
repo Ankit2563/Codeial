@@ -6,6 +6,9 @@ const app = express();
 const cookieParser = require('cookie-parser');
 const expressLayouts = require("express-ejs-layouts");
 const db = require("./config/mongoose");
+const session = require('express-session');//for authenticate using the passport
+const passport = require('passport');
+const passportLocal = require('./config/passport-local-strategy');
 
 // Middleware
 app.use(express.static("./assets"));
@@ -22,6 +25,19 @@ app.use(expressLayouts);
 // View Engine Configuration
 app.set("view engine", "ejs");
 app.set("views", "./views");
+app.use(session({
+  name: 'codeial',
+  //todo change the secret before the deployment
+  secret: 'something',
+  saveUninitialized: false,
+  resave: false,
+  cookie: {
+    maxAge:(1000 *60*100)
+  }
+  
+}))
+app.use(passport.initialize());
+app.use(passport.session());
 app.set("layout extractStyles", true);
 app.set("layout extractScripts", true);
 
