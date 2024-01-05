@@ -8,3 +8,10 @@ cookie basicly stores its identity ocassionally when u logIn
 Installing the cookie ->npm install cookie-parser
 
 to got into new branch
+some part of the coding have done in the branch manual-local-aut branch
+comes to the main branch
+
+Passport is authentication middleware for Node.js. Extremely flexible and modular, Passport can be unobtrusively dropped in to any Express-based web application. A comprehensive set of strategies support authentication using a username and password, Facebook, Twitter, and more.
+
+install passport->npm install passport
+install passport-local ->npm install passport-local
