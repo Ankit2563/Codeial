@@ -1,5 +1,4 @@
 
-
 /** @format */
 const express = require("express");
 const app = express();
@@ -29,7 +28,7 @@ app.use(session({
   name: 'codeial',
   //todo change the secret before the deployment
   secret: 'something',
-  saveUninitialized: false,
+  saveUninitialized: false,//
   resave: false,
   cookie: {
     maxAge:(1000 *60*100)
@@ -38,6 +37,10 @@ app.use(session({
 }))
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use(passport.setAuthenticateUser);
+
+
 app.set("layout extractStyles", true);
 app.set("layout extractScripts", true);
 
