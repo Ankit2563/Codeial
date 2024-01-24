@@ -15,3 +15,18 @@ Passport is authentication middleware for Node.js. Extremely flexible and modula
 
 install passport->npm install passport
 install passport-local ->npm install passport-local
+
+
+to store the cookie in mongo
+npm install connect-mongo
+
+
+SCSS and SASS
+
+Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
+
+Sass has two syntaxes! The SCSS syntax (.scss) is used most commonly. It’s a superset of CSS, which means all valid CSS is also valid SCSS. The indented syntax (.sass) is more unusual: it uses indentation rather than curly braces to nest statements, and newlines instead of semicolons to separate them. All our examples are available in both syntaxes.
+
+installing sass->npm install node-sass-middleware
+
+
